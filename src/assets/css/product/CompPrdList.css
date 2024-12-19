@@ -133,7 +133,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .prd-card .prd-comment {
-  font-size: 10px;
+  font-size: 13px;
   padding: 10px;
   height: 100px;
 }
