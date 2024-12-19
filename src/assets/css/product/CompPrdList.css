@@ -190,7 +190,3 @@ input[type="checkbox"]:checked::before {
 .prd-thumnail-img {
   height: 300px;
 }
-
-.prd-detail-img {
-  height: 300px;
-}
