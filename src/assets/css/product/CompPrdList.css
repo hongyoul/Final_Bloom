@@ -94,7 +94,6 @@ input[type="checkbox"]:checked::before {
 }
 
 .prd-list-wrap {
-  height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
