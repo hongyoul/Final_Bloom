@@ -134,7 +134,8 @@ input[type="checkbox"]:checked::before {
 
 .prd-card .prd-comment {
   font-size: 12px;
-  height: 120px;
+  padding: 20px;
+  height: 60px;
 }
 
 .prd-iist-box:hover {
@@ -181,13 +182,16 @@ input[type="checkbox"]:checked::before {
   font-weight: bold;
 }
 
+.prd-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
 .prd-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   margin-bottom: 10px;
 }
-
-/* .prd-thumnail-img {
-  height: 300px;
-} */
