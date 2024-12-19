@@ -132,7 +132,7 @@ input[type="checkbox"]:checked::before {
   justify-content: center;
 }
 
-.prd-comment {
+.prd-card .prd-comment {
   font-size: 10px;
   padding: 10px;
   height: 100px;
