@@ -134,6 +134,7 @@ input[type="checkbox"]:checked::before {
 
 .prd-card .prd-comment {
   font-size: 12px;
+  height: 100px;
 }
 
 .prd-iist-box:hover {
