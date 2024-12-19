@@ -134,6 +134,10 @@ input[type="checkbox"]:checked::before {
   justify-content: space-between;
 }
 
+.prd-card .prd-comment {
+  font-size: 12px;
+}
+
 .prd-iist-box:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }

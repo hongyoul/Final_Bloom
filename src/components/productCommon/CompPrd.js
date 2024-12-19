@@ -57,7 +57,7 @@ const CompPrd = ({ pdNo, pdName, price, thumnail, comment }) => {
         <img src={`${thumnail}`} alt={pdName} className="prd-img" />
         <h4>{pdName}</h4>
         <p>{price.toLocaleString()} 원</p>
-        <p>{comment}</p>
+        <p className="prd-comment">{comment}</p>
       </div>
       {/* 장바구니 등록 버튼 */}
       <button className="wishlist-btn" onClick={handleWishlist}>
