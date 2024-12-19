@@ -133,7 +133,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .prd-img-container .prd-comment {
-  font-size: 12px;
+  font-size: 10px;
   padding: 10px;
   height: 100px;
 }
@@ -180,6 +180,13 @@ input[type="checkbox"]:checked::before {
 .pagination .page-before:hover,
 .pagination .page-after:hover {
   font-weight: bold;
+}
+
+.prd-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .prd-img {
