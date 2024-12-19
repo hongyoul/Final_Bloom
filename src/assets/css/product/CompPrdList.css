@@ -129,7 +129,7 @@ input[type="checkbox"]:checked::before {
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .prd-card .prd-comment {
