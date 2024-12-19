@@ -132,12 +132,13 @@ input[type="checkbox"]:checked::before {
   justify-content: space-between;
 }
 
-.prd-comment {
+.prd-card .prd-comment {
   font-size: 12px;
   height: 100px;
   overflow: hidden; /* 내용을 초과하면 숨김 */
-  text-overflow: ellipsis; /* 내용 초과 시 ... 처리 */
-  white-space: nowrap; /* 텍스트를 한 줄로 고정 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 최대 줄 수 설정 (예: 3줄) */
+  -webkit-box-orient: vertical;
 }
 
 .prd-iist-box:hover {
