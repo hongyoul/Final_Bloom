@@ -134,10 +134,7 @@ input[type="checkbox"]:checked::before {
 
 .prd-comment {
   font-size: 12px;
-  height: 100px;
-  overflow: hidden; /* 내용을 초과하면 숨김 */
-  text-overflow: ellipsis; /* 내용 초과 시 ... 처리 */
-  white-space: nowrap; /* 텍스트를 한 줄로 고정 */
+  height: 120px;
 }
 
 .prd-iist-box:hover {
