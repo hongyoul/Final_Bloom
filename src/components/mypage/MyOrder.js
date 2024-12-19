@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { Context } from "../../index";
 import "../../assets/css/mypage/MyOrder.css";
 
 const MyOrder = () => {
 
   const [orders, setOrders] = useState([]);
+  const { host } = useContext(Context);
   const authToken = useSelector((state) => state.member.authToken);
   
   const getRandomDeliveryStatus = () => {
@@ -21,7 +23,8 @@ const MyOrder = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:8080/orders/myList", {
+        const response = await axios.get(
+          `${host}/orders/myList`, {
           headers: {
             Authorization: authToken,
             'Content-Type': 'application/json',

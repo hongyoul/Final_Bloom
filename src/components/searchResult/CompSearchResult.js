@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import CompPrd from '../productCommon/CompPrd';
 import { useSelector } from 'react-redux';
+import { Context } from "../../index";
 import axios from 'axios';
 import '../../assets/css/product/CompPrdList.css'
 
@@ -9,6 +10,7 @@ const CompSearchResult = () => {
 
   const location = useLocation();
   const [ prdList, setPrdList ] = useState([]);
+  const { host } = useContext(Context);
   const authToken = useSelector((state) => state.member.authToken);
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
@@ -22,7 +24,7 @@ const CompSearchResult = () => {
     const getProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/product/list",
+          `${host}/product/list`,
           {
             headers: {
               Authorization: authToken,

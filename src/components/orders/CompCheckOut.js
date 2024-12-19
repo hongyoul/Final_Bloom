@@ -56,7 +56,7 @@ const CompCheckOut = () => {
         const memberId = extractMemberIdFromToken(token); // 사용자 ID 추출
 
         // 1. 장바구니 데이터 가져오기
-        const cartResponse = await axios.get('http://localhost:8080/orders/checkout', {
+        const cartResponse = await axios.get(`${host}/orders/checkout`, {
           headers: {
             Authorization: token,
             'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const CompCheckOut = () => {
         setFinalPrice(total + shipping);
 
         // 2. 회원 데이터 가져오기
-        const memberResponse = await axios.get(`http://localhost:8080/member/${memberId}`, {
+        const memberResponse = await axios.get(`${host}/member/${memberId}`, {
           headers: {
             Authorization: token,
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const CompCheckOut = () => {
       if (token) {
         const memberId = extractMemberIdFromToken(token);
         try {
-          const response = await axios.get(`http://localhost:8080/member/${memberId}`, {
+          const response = await axios.get(`${host}/member/${memberId}`, {
             headers: {
               Authorization: token,
               'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ const CompCheckOut = () => {
     }
 
     // 가맹점 결제 요청 (서버)
-    const completeResponse = await fetch("http://localhost:8080/orders/register", {
+    const completeResponse = await fetch(`${host}/orders/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

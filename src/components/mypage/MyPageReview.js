@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import "../../assets/css/mypage/MyPageReview.css";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Context } from "../../index";
 
 const MyPageReview = () => {
 
+  const { host } = useContext(Context);
   const [reviews, setReviews] = useState([]); // 리뷰 데이터를 저장
   const [error, setError] = useState(null); // 에러 메시지 저장
   const { isLogged, userId } = useSelector((state) => state.member);  // Redux에서 로그인 정보 가져오기
@@ -24,7 +26,7 @@ const MyPageReview = () => {
     
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get("http://localhost:8080/review/myList", {
+        const response = await axios.get(`${host}/review/myList`, {
           headers: {
             Authorization: token,
           },

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import { Context } from "../../index";
 import { useParams } from 'react-router-dom';
 import '../../assets/css/product/CompPrdDetailInfo.css';
 
 const CompPrdDetailInfo = () => {
 
   const { pdNo } = useParams();
-
+  const { host } = useContext(Context);
   const [detailImgs, setDetailImgs] = useState([]); // 상태 초기화
 
   // ProductDetail 정보 불러오기
@@ -19,7 +20,7 @@ const CompPrdDetailInfo = () => {
 
       try {
         // API 요청으로 detailImgs 데이터 가져오기
-        const response = await axios.get(`http://localhost:8080/product/read?no=${pdNo}`);
+        const response = await axios.get(`${host}/product/read?no=${pdNo}`);
         const images = response.data?.detailImgs || []; // 배열 확인 및 초기화
         setDetailImgs(images);
       } catch (error) {
