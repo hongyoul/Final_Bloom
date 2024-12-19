@@ -182,13 +182,6 @@ input[type="checkbox"]:checked::before {
   font-weight: bold;
 }
 
-.prd-img-container {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  position: relative;
-  overflow: hidden;
-}
-
 .prd-img {
   width: 100%;
   aspect-ratio: 1 / 1;

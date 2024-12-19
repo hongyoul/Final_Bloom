@@ -184,3 +184,10 @@
   height: 100%;
   object-fit: cover;
 }
+
+.prd-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
