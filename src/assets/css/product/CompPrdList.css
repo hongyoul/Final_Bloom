@@ -132,7 +132,7 @@ input[type="checkbox"]:checked::before {
   justify-content: space-between;
 }
 
-.prd-card .prd-comment {
+.prd-comment {
   font-size: 12px;
   height: 100px;
   overflow: hidden; /* 내용을 초과하면 숨김 */
