@@ -8,14 +8,14 @@ import { PersistGate } from "redux-persist/integration/react"; // PersistGate ì¶
 
 export const Context = createContext();
 
-// const host = "http://localhost:8080";
+const host = "http://localhost:8080";
 
-let host;
-if (window.location.hostname === "localhost") {
-  host = 'http://localhost:8080';
-} else {
-  host = '/api';
-}
+// let host;
+// if (window.location.hostname === "localhost") {
+//   host = 'http://localhost:8080';
+// } else {
+//   host = '/api';
+// }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
